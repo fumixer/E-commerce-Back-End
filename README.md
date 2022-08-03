@@ -1,12 +1,12 @@
 # E-commerce Back End
-This is a e commerce back end application using node.js and sequelize.
+This is a e commerce back end application based on node.js and sequelize.
 
 ### Github : https://github.com/fumixer/E-commerce-Back-End
 
 ### Workthrough video : 
 
 ### Screenshot
-![imsonia](./asset/Screen%20Shot%202022-08-02%20at%2010.41.52%20PM.png)
+![post_put_delete](./asset/POST_PUT_DELETE.gif)
 
 ### Technologies
 * node.js

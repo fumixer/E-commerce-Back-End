@@ -5,43 +5,43 @@ const { Category, Product } = require('../../models');
 
 router.get('/', (req, res) => {
   // find all categories
-    // be sure to include its associated Products
+  // be sure to include its associated Products
   Category.findAll({
     include: [Product],
-  //   attributes:[
-  //     'id',
-  //     'product_name',
-  //     'price',
-  //     'stock',
-  //     'category_id',
-  //   ],
-  //   include:[{
-  //     model:category,
-  //     attributes:['category_name'],
-  //   }
-  // ]
-})
-  .then(dbProductData => res.json(dbProductData))
-  .catch(err => {
-    console.log(err);
-    res.status(500).json(err);
+    //   attributes:[
+    //     'id',
+    //     'product_name',
+    //     'price',
+    //     'stock',
+    //     'category_id',
+    //   ],
+    //   include:[{
+    //     model:category,
+    //     attributes:['category_name'],
+    //   }
+    // ]
   })
+    .then(dbProductData => res.json(dbProductData))
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    })
 });
 
 router.get('/:id', (req, res) => {
   Category.findOne({
-    where:{
+    // find one category by its `id` value
+    // be sure to include its associated Products
+    where: {
       id: req.params.id
     },
     include: [Product],
   })
-  // find one category by its `id` value
-  // be sure to include its associated Products
-  .then(dbProductData => res.json(dbProductData))
-  .catch(err => {
-    console.log(err);
-    res.status(500).json(err);
-  })
+    .then(dbProductData => res.json(dbProductData))
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    })
 });
 
 router.post('/', (req, res) => {
@@ -49,11 +49,11 @@ router.post('/', (req, res) => {
   Category.create(
     req.body
   )
-  .then(dbProductData => res.json(dbProductData))
-  .catch(err => {
-    console.log(err);
-    res.status(500).json(err);
-  })
+    .then(dbProductData => res.json(dbProductData))
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    })
 });
 
 router.put('/:id', (req, res) => {
@@ -65,11 +65,11 @@ router.put('/:id', (req, res) => {
         id: req.params.id
       }
     })
-  .then(dbProductData => res.json(dbProductData))
-  .catch(err => {
-    console.log(err);
-    res.status(500).json(err);
-  })
+    .then(dbProductData => res.json(dbProductData))
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    })
 });
 
 router.delete('/:id', (req, res) => {
@@ -80,11 +80,11 @@ router.delete('/:id', (req, res) => {
         id: req.params.id
       }
     })
-  .then(dbProductData => res.json(dbProductData))
-  .catch(err => {
-    console.log(err);
-    res.status(500).json(err);
-  })
+    .then(dbProductData => res.json(dbProductData))
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    })
 });
 
 module.exports = router;
