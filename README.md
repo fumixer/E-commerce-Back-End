@@ -6,7 +6,9 @@ This is a e commerce back end application based on node.js and sequelize.
 ### Workthrough video : 
 
 ### Screenshot
-![post_put_delete](./asset/POST_PUT_DELETE.gif)
+![GET request](./asset/1.%20GET%20request.gif)
+![GET by ID](./asset/2.%20GET_by_ID.gif)
+![post_put_delete](./asset/3.%20POST_PUT_DELETE.gif)
 
 ### Technologies
 * node.js
