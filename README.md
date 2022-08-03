@@ -3,7 +3,7 @@ This is a e commerce back end application based on node.js and sequelize.
 
 ### Github : https://github.com/fumixer/E-commerce-Back-End
 
-### Workthrough video : 
+### Workthrough video : https://drive.google.com/file/d/1JJgNRlto1ABX5NQrGy9fNzXgYA1Obj4V/view?usp=sharing
 
 ### Screenshot
 ![GET request](./asset/1.%20GET%20request.gif)
